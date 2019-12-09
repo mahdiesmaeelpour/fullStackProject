@@ -30,7 +30,7 @@ export class ApiService {
   }
 
   // Get player
-  Getplayer(id): Observable<any> {
+  Getplayer(id: string): Observable<any> {
     let API_URL = `${this.endpoint}/read-player/${id}`;
     return this.http.get(API_URL, { headers: this.headers }).pipe(
       map((res: Response) => {
@@ -41,15 +41,15 @@ export class ApiService {
   }
 
   // Update player
-  Updateplayer(id, data: Player): Observable<any> {
-    let API_URL = `${this.endpoint}/update/${id}`;
+  Updateplayer(id: string, data: Player): Observable<any> {
+    let API_URL = `${this.endpoint}/update-player/${id}`;
     return this.http.put(API_URL, data, { headers: this.headers }).pipe(
       catchError(this.errorMgmt)
     )
   }
 
   // Delete player
-  Deleteplayer(id): Observable<any> {
+  Deleteplayer(id: any): Observable<any> {
     var API_URL = `${this.endpoint}/delete-player/${id}`;
     return this.http.delete(API_URL).pipe(
       catchError(this.errorMgmt)

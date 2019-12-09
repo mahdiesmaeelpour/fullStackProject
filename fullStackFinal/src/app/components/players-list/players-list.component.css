@@ -1,0 +1,21 @@
+.keepCenter
+{
+
+    background-color: lightgrey;
+    border: 15px solid lightslategray;
+    padding-top : 7px;
+    padding-right : 7px;
+    padding-bottom : 7px;
+    padding-left : 7px;
+    box-shadow: 10px 10px rgba(128, 128, 128, 0.329);
+    
+}
+td
+{
+    background-color: slategray;
+    color: snow;
+}
+tr,.Tfooter
+{
+    background-color: orange;
+}

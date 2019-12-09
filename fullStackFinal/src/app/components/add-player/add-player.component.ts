@@ -24,8 +24,10 @@ export class AddPlayerComponent implements OnInit {
   @ViewChild('resetPlayerForm', {static : true}) myNgForm;
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   playerForm: FormGroup;
-  subjectArray: Subject[] = [];
-  SectioinArray: any = ['A', 'B', 'C', 'D', 'E'];
+ 
+  SectioinArray_rank: any = ['1', '2', '3', '4', '5'];
+  SectioinArray_favgame: any = ['Game_1', 'Game_2', 'Game_3', 'Game_4'];
+  SectioinArray_status: any = ['Available', 'Unavailable'];
 
   ngOnInit() {
     this.submitBookForm();
@@ -42,43 +44,23 @@ export class AddPlayerComponent implements OnInit {
   submitBookForm() {
     this.playerForm = this.fb.group({
       player_name: ['', [Validators.required]],
-      player_email: ['', [Validators.required]],
-      section: ['', [Validators.required]],
-      subjects: [this.subjectArray],
-      dob: ['', [Validators.required]],
-      gender: ['Male']
+      player_rank: ['', [Validators.required]],
+      player_score: ['', [Validators.required]],
+      player_time: ['', [Validators.required]],
+      player_favgame: ['', [Validators.required]],
+      player_status: ['', [Validators.required]]
     })
   }
 
   /* Add dynamic languages */
   add(event: MatChipInputEvent): void {
     const input = event.input;
-    const value = event.value;
-    // Add language
-    if ((value || '').trim() && this.subjectArray.length < 5) {
-      this.subjectArray.push({ name: value.trim() })
-    }
+
     // Reset the input value
     if (input) {
       input.value = '';
     }
   }
-
-  /* Remove dynamic languages */
-  remove(subject: Subject): void {
-    const index = this.subjectArray.indexOf(subject);
-    if (index >= 0) {
-      this.subjectArray.splice(index, 1);
-    }
-  }  
-
-  /* Date */
-  formatDate(e) {
-    var convertDate = new Date(e.target.value).toISOString().substring(0, 10);
-    this.playerForm.get('dob').setValue(convertDate, {
-      onlyself: true
-    })
-  }  
 
   /* Get errors */
   public handleError = (controlName: string, errorName: string) => {

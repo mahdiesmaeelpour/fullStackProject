@@ -6,20 +6,20 @@ let player = new Schema({
   player_name: {
     type: String
   },
-  player_email: {
+  player_rank: {
     type: String
   },
-  section: {
+  player_score: {
     type: String
   },
-  subjects: {
-    type: Array
-  },
-  gender: {
+  player_time: {
     type: String
   },
-  dob: {
-    type: Date
+  player_favgame: {
+    type: String
+  },
+  player_status: {
+    type: String
   }
 }, {
   collection: 'players'

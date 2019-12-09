@@ -1,0 +1,12 @@
+.keepCenter
+{
+    text-align: right;
+    background-color: lightgrey;
+    border: 15px solid lightslategray;
+    padding-top : 20px;
+    padding-right : 20px;
+    padding-bottom : 20px;
+    padding-left : 20px;
+    box-shadow: 10px 10px rgba(128, 128, 128, 0.329);
+    
+}
