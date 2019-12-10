@@ -25,8 +25,8 @@ export class EditPlayerComponent implements OnInit {
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   playerForm: FormGroup;
 
-  SectioinArray_rank: any = ['1', '2', '3', '4', '5'];
-  SectioinArray_favgame: any = ['Game_1', 'Game_2', 'Game_3', 'Game_4'];
+  SectioinArray_rank: any = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+  SectioinArray_favgame: any = ['Game_1', 'Game_2', 'Game_3', 'Game_4', 'Game_5'];
   SectioinArray_status: any = ['Available', 'Unavailable'];
 
   ngOnInit() {

@@ -25,6 +25,10 @@ export class PlayersListComponent implements OnInit {
     })    
   }
 
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+  
   ngOnInit() { }
 
   deletePlayer(index: number, e){

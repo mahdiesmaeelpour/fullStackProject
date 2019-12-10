@@ -9,6 +9,11 @@
 <div class="container" *ngIf="PlayerData.length > 0">
   <div class="keepCenter">
     <div class="mat-elevation-z8">
+      <!-- Search -->
+      <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+      </mat-form-field>
+
       <table mat-table [dataSource]="dataSource">
 
 
