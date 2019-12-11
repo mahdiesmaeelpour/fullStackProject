@@ -27,7 +27,6 @@ export class EditPlayerComponent implements OnInit {
 
   SectioinArray_rank: any = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
   SectioinArray_favgame: any = ['Game_1', 'Game_2', 'Game_3', 'Game_4', 'Game_5'];
-  SectioinArray_status: any = ['Available', 'Unavailable'];
 
   ngOnInit() {
     this.updateBookForm();
@@ -49,7 +48,8 @@ export class EditPlayerComponent implements OnInit {
         player_score: [data.player_score, [Validators.required]],
         player_time: [data.player_time, [Validators.required]],
         player_favgame: [data.player_favgame, [Validators.required]],
-        player_status: [data.player_status, [Validators.required]]
+        player_status: [data.player_status, [Validators.required]],
+        player_game: [data.player_game, [Validators.required]]
       })      
     })    
   }
@@ -62,7 +62,8 @@ export class EditPlayerComponent implements OnInit {
       player_score: ['', [Validators.required]],
       player_time: ['', [Validators.required]],
       player_favgame: ['', [Validators.required]],
-      player_status: ['', [Validators.required]]
+      player_status: ['', [Validators.required]],
+      player_game: ['', [Validators.required]]
     })
   }
 

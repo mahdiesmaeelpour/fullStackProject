@@ -19,6 +19,9 @@ let player = new Schema({
     type: String
   },
   player_status: {
+    type: Boolean
+  },
+  player_game: {
     type: String
   }
 }, {

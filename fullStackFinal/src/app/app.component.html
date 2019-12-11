@@ -1,7 +1,7 @@
 <div class=mcenter>
   <!-- Toolbar -->
   <mat-toolbar class="header">
-    <div class=textheader>player Records</div>
+    <div class=textheader>FullStack Project </div> <div calss="studentsName">(Ali Ahangar 101079203 and Mahdi Esmaeelpour 101124172)</div>
     <span class="nav-tool-items">
       <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
     </span>
@@ -17,13 +17,20 @@
             <mat-icon>add</mat-icon>
           </div>
           <div class="mnuebtn"></div>
-          <div class="mnuebtn"> Add player</div>
+          <div class="mnuebtn"> Add Player</div>
         </a>
         <a mat-list-item routerLinkActive="active" routerLink="/players-list">
           <div class="mnuebtn">
             <mat-icon>format_list_bulleted</mat-icon>
           </div>
-          <div class="mnuebtn"> View players</div>
+          <div class="mnuebtn"> Admin View</div>
+        </a>
+
+        <a mat-list-item routerLinkActive="active" routerLink="/user-list">
+          <div class="mnuebtn">
+            <mat-icon>format_list_bulleted</mat-icon>
+          </div>
+          <div class="mnuebtn"> Player View</div>
         </a>
 
       </mat-nav-list>
@@ -33,5 +40,6 @@
     <mat-sidenav-content>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
+    
   </mat-sidenav-container>
 </div>

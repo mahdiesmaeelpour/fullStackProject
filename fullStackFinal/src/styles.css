@@ -76,3 +76,9 @@ body .push-right{margin-right:10px;}
     margin-right: 45px;
     margin-left: 45px;
 }
+.studentsName
+{
+    text-align: right;
+    font-size: small;
+    color: brown;
+}

@@ -62,9 +62,9 @@
           <!-- Status -->
           <mat-form-field>
             <mat-label>Status :</mat-label>
-            <mat-select [(value)]="selected" formControlName="player_status">
-              <mat-option [value]="sectioinArray" *ngFor="let sectioinArray of SectioinArray_status">{{sectioinArray}}
-              </mat-option>
+            <mat-select formControlName="player_status">
+              <mat-option value=true >Available</mat-option>
+              <mat-option value=false >UnAvailable</mat-option>
             </mat-select>
             <mat-error *ngIf="handleError('player_status', 'required')">
               Status is required

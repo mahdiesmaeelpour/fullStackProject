@@ -11,6 +11,8 @@ import { PlayersListComponent } from './components/players-list/players-list.com
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './shared/api.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { JoinGameComponent } from './components/join-game/join-game.component';
 
 
 
@@ -20,7 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     AddPlayerComponent,
     EditPlayerComponent,
-    PlayersListComponent
+    PlayersListComponent,
+    UserListComponent,
+    JoinGameComponent
   ],
   imports: [
     BrowserModule,
